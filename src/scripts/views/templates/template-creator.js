@@ -46,7 +46,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
       </p>
     </div>
     <div class="restaurant-menu-drinks">
-      <h3>Menu Makanan</h3>
+      <h3>Menu Minuman</h3>
       <p>
       ${restaurant.menus.drinks.map(drink => {
         return ' ' + drink.name
