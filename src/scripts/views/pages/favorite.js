@@ -18,9 +18,24 @@ const Favorite = {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants()
     const restaurantsContainer = document.querySelector('#catalogs')
 
-    restaurants.forEach((restaurant) => {
-      restaurantsContainer.innerHTML += createRestaurantCatalogTemplate(restaurant)
-    })
+    if (restaurants.length > 0) {
+      restaurants.forEach((restaurant) => {
+        restaurantsContainer.innerHTML += createRestaurantCatalogTemplate(restaurant)
+      })
+    } else {
+      restaurantsContainer.innerHTML = `
+        <article>
+        </article>
+        <article>
+        <section class="message">
+        <h1>🤨</h1>
+        <p>Belum Ada Restoran Favorit</p>
+        </section>
+        </article>
+        <article>
+        </article>
+      `
+    }
   }
 }
 

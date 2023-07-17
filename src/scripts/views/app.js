@@ -1,6 +1,7 @@
 import DrawerInitiator from '../utils/drawer-initiator'
 import UrlParser from '../routes/url-parser'
 import routes from '../routes/routes'
+import NotFound from '../views/pages/notFound'
 
 class App {
   constructor ({ button, drawer, content }) {
@@ -22,9 +23,12 @@ class App {
   async renderPage () {
     const url = UrlParser.parseActiveUrlWithCombiner()
     const page = routes[url]
-    this._content.innerHTML = await page.render()
-    await page.afterRender()
-
+    try {
+      this._content.innerHTML = await page.render()
+      await page.afterRender()
+    } catch (error) {
+      this._content.innerHTML = await NotFound.render()
+    }
     const skipLinkElem = document.querySelector('.skip-link')
     skipLinkElem.addEventListener('click', (event) => {
       event.preventDefault()
