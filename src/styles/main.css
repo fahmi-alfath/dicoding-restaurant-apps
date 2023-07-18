@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -67,30 +68,52 @@ a {
 .hero {
   display: flex;
   align-items: center;
-  min-height: 380px;
   width: 100%;
   text-align: center;
-  background-image: url("../public/images/heros/hero-image.jpg");
   background-position: center;
   background-color: green;
   text-shadow: -2px 2px #343F56;
 }
 
 .hero-inner {
+  position: relative;
   margin: 0 auto;
-  max-width: 800px;
+  width: 100%;
+  overflow: hidden;
+  min-height: 200px;
+  max-height: 500px;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+.hero-inner picture {
+  width: 100%;
+  max-height: 300px;
+}
+
+.hero-inner img, .hero-inner source {
+  display: block;
+  width: 100%;
 }
 
 .hero-title {
   color: #fff;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 25px;
 }
 
 .hero-tagline {
   color: #fff;
   margin-top: 16px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 300;
 }
 
@@ -188,9 +211,9 @@ footer p {
   padding: 8px;
   z-index: 100;
 }
- 
+
 .skip-link:focus {
-   top: 0;
+  top: 0;
 }
 
 /**
