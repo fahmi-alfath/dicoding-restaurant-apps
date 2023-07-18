@@ -6,12 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Telusuri Restoran Terbaik dengan Sekali Klik.">
-    <meta name="theme-color" content="#343F56"/>
+    <meta name="theme-color" content="#343F56" />
     <title>RestoKita &mdash; Restoran di Sekitar Kita</title>
     <link rel="manifest" href="./app.webmanifest">
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
     <link rel="icon" href="./icons/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -19,7 +18,9 @@
     <header class="header">
         <nav id="navigationDrawer">
             <ul class="menu">
-                <li class="logo"><p>Resto<span>Kita</span></p></li>
+                <li class="logo">
+                    <p>Resto<span>Kita</span></p>
+                </li>
                 <li class="toggle"><a href="#" id="hamburgerButton" aria-label="main menu">☰</a></li>
 
                 <li class="item"><a href="#/home">Home</a></li>
@@ -31,8 +32,14 @@
 
     <div class="hero">
         <div class="hero-inner">
-            <h1 class="hero-title">Restoran Terbaik di Sekitar Kita</h1>
-            <p class="hero-tagline">Telusuri Restoran Terbaik dengan Sekali Klik</p>
+            <div class="hero-content">
+                <h1 class="hero-title">Restoran Terbaik di Sekitar Kita</h1>
+                <p class="hero-tagline">Telusuri Restoran Terbaik dengan Sekali Klik</p>
+            </div>
+            <picture>
+                <source media="(max-width: 600px)" srcset="./images/hero-image-small.jpg">
+                <img src="./images/hero-image-large.jpg" alt="resto kita hero">
+            </picture>
         </div>
     </div>
 
@@ -41,7 +48,7 @@
     <footer>
         <p>Copyright &copy; 2023 &mdash; RestoKita. Developed by Fahmi Alfath.</p>
     </footer>
-    
+
     <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
 </body>
 

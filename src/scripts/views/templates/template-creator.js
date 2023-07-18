@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config'
 const createRestaurantDetailTemplate = (restaurant) => `
   <article class="restaurant">
     <h1 class="restaurant-name">${restaurant.name}</h1>
-    <img class="restaurant-picture" src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + 'large/' + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="${restaurant.name}" />
+    <img class="restaurant-picture lazyload" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + 'large/' + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="${restaurant.name}" />
     <div class="restaurant-info">
       <h3>Informasi</h3>
       <p>
@@ -78,7 +78,7 @@ const createRestaurantCatalogTemplate = (restaurant) => `
       </h1>
   </div>
     <div class="catalog-image-group">
-      <img class="catalog-item-thumbnail" src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + 'small/' + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}"
+      <img class="catalog-item-thumbnail lazyload" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + 'small/' + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}"
       alt="${restaurant.name}">
       <div class="catalog-item-detail">
         <p class="catalog-item-location">
