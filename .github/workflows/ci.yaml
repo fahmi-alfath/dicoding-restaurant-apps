@@ -27,4 +27,5 @@ jobs:
       - name: Run Automated Test
         run: |
           npm run test
+          npm run start-dev
           npm run e2e
