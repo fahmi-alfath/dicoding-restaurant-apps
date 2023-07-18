@@ -11,7 +11,7 @@ jobs:
  
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
  
     steps:
       - uses: actions/checkout@v3
@@ -19,8 +19,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Run Automated Test
+      - name: npm installing
         run: |
           npm install
+      - name: Install Puppeteer
+        run: npm install --save-dev puppeteer
+      - name: Run Automated Test
+        run: |
           npm run test
           npm run e2e
