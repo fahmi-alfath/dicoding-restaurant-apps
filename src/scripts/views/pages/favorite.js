@@ -11,7 +11,8 @@ const Favorite = {
   },
 
   async afterRender () {
-    FavoriteRestaurantShowPresenter({ view, favoriteRestaurants: FavoriteRestaurantIdb })
+    // eslint-disable-next-line no-new
+    new FavoriteRestaurantShowPresenter({ view, favoriteRestaurants: FavoriteRestaurantIdb })
   }
 }
 
