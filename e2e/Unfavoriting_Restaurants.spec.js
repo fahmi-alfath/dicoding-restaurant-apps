@@ -1,5 +1,4 @@
-const assert = require('assert')
-
+/* eslint-disable no-undef */
 Feature('Unfavoriting Restaurants')
 
 Before(({ I }) => {
