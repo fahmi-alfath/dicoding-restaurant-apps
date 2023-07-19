@@ -31,7 +31,7 @@ Scenario('add a restaurant to favorite', async ({ I }) => {
   I.amOnPage('#/favorite')
   I.waitForElement('.catalog-item', 10)
   I.seeElement('.catalog-item-title a')
-  const likedRestoName = await I.grabTextFrom('.catalog-item-title a')
+  const favoritedRestoName = await I.grabTextFrom('.catalog-item-title a')
 
-  assert.strictEqual(firstRestoName, likedRestoName)
+  assert.strictEqual(firstRestoName, favoritedRestoName)
 })

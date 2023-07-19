@@ -20,7 +20,7 @@ class FavoriteRestaurantView {
   showFavoriteRestaurants (restaurant = []) {
     let html
     if (restaurant.length) {
-      html = restaurant.reduce((carry, movie) => carry.concat(createRestaurantCatalogTemplate(movie)), '')
+      html = restaurant.reduce((carry, retaurant) => carry.concat(createRestaurantCatalogTemplate(retaurant)), '')
     } else {
       html = this._getEmptyRestaurantTemplate()
     }

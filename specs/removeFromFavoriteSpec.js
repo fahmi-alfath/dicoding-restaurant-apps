@@ -22,7 +22,7 @@ describe('Unfavoriting A Restaurant', () => {
     expect(document.querySelector('[aria-label="hapus dari favorit"]')).toBeTruthy()
   })
 
-  it('should not display like widget when the restaurant has been favorited', async () => {
+  it('should not display favorite widget when the restaurant has been favorited', async () => {
     await TestFactories.createFavoriteButtonPresenterWithRestaurant({ id: 'dy62fuwe6w8kfw1e867' })
 
     expect(document.querySelector('[aria-label="tambah ke favorit"]')).toBeFalsy()
